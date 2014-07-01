@@ -38,6 +38,7 @@
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		CCAA954219621149000BDAAA /* Seal.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA954119621149000BDAAA /* Seal.m */; };
 		CCAA95461962115E000BDAAA /* Penguin.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA95451962115E000BDAAA /* Penguin.m */; };
+		CCAA954B19624319000BDAAA /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA954A19624319000BDAAA /* Gameplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		CCAA954119621149000BDAAA /* Seal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Seal.m; path = Source/Seal.m; sourceTree = "<group>"; };
 		CCAA95441962115E000BDAAA /* Penguin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Penguin.h; path = Source/Penguin.h; sourceTree = "<group>"; };
 		CCAA95451962115E000BDAAA /* Penguin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Penguin.m; path = Source/Penguin.m; sourceTree = "<group>"; };
+		CCAA954919624319000BDAAA /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
+		CCAA954A19624319000BDAAA /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				CCAA954119621149000BDAAA /* Seal.m */,
 				CCAA95441962115E000BDAAA /* Penguin.h */,
 				CCAA95451962115E000BDAAA /* Penguin.m */,
+				CCAA954919624319000BDAAA /* Gameplay.h */,
+				CCAA954A19624319000BDAAA /* Gameplay.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -341,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "osascript -e 'tell application \"System Events\"' -e 'set ProcessList to name of every process' -e 'if \"SpriteBuilder\" is in ProcessList then' -e 'tell application \"SpriteBuilder\" to publish' -e 'end if' -e 'end tell'\n\nif ! [ -n \"${MGWU_SKIP_PUSH}\" ]; then\ngit add . --all\ngit commit -m \"Automatically Committed for MakeGamesWithUs\"\n#git push origin master || true\nfi";
+			shellScript = "osascript -e 'tell application \"System Events\"' -e 'set ProcessList to name of every process' -e 'if \"SpriteBuilder\" is in ProcessList then' -e 'tell application \"SpriteBuilder\" to publish' -e 'end if' -e 'end tell'\n\nif ! [ -n \"${MGWU_SKIP_PUSH}\" ]; then\ngit add . --all\ngit commit -m \"Automatically Committed for MakeGamesWithUs\"\ngit push origin master || true\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -355,6 +360,7 @@
 				CCAA954219621149000BDAAA /* Seal.m in Sources */,
 				CCAA95461962115E000BDAAA /* Penguin.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				CCAA954B19624319000BDAAA /* Gameplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
